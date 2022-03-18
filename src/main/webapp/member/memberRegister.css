@@ -1,0 +1,127 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap');
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{background-color: rgb(185, 184, 184);}
+#member_box{
+    position: relative;
+    margin: 2% auto;
+    width: 50%;
+    height: 1100px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#member_box #back{
+    position: relative;
+    top: 7px;
+    margin-left: 1%;
+    width: 35px;
+    height: 35px;
+    /* background-color: aqua; */
+}
+#member_box #back .bx-left-arrow-alt{
+    width: 20px;
+    margin: 10% auto;
+    margin-left: 15%;
+    font-size: 25px;
+    cursor: pointer;
+}
+#member_box #back .bx-left-arrow-alt:hover{
+    color: #F5D1B8;
+    transition: all 0.5s ease;
+}
+#member_box .logo_box a{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    /* background-color: #fcac8f; */
+    align-items: center;
+    text-decoration: none;
+}
+#member_box .logo_box a img{
+    margin-left: 30%;
+}
+#member_box .logo_box a span{
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #2B3340;
+}
+#member_box #form_box{
+    position: relative;
+    top: 2%;
+    left: 24%;
+    font-family: 'Gothic A1', sans-serif;
+    margin-left: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 24px;
+}
+#member_box #form_box #id, #pw, #pwChk, #name, #gender, #email{
+    width: 350px;
+    height: 45px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 5px;
+}
+#member_box #form_box #mobile{
+    width: 260px;
+    height: 45px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 5px;
+}
+#member_box #form_box #timer{
+    width: 350px;
+    height: 45px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 5px;	
+}
+#member_box #form_box #sendMessage, #completion{
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #fff;
+    width: 90px;
+    height: 45px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 5px;
+    background-color: #fcac8f;
+    cursor: pointer;
+}
+#member_box #form_box #sendMessage:hover, #completion:hover{
+    background-color: #FF9A76;
+    transition: all 0.5s ease;
+}
+#member_box #form_box #birthYear, #birthMonth, #birthDate{
+    width: 115px;
+    height: 45px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 5px;
+}
+#member_box #form_box .id, .pw, .pwChk, .name, .gender, .email, .mobile, .birth, .timer, .registerBtn{
+    margin: 20px;
+}
+input:focus {
+	outline:1px solid #FF9A76;
+}
+#member_box #form_box #registerBtn{
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    background-color: #fcac8f;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(224, 224, 224);
+    margin-top: 5%;
+    margin-left: 4%;
+    cursor: pointer;
+}
+#member_box #form_box #registerBtn:hover {
+    background-color: #FF9A76;
+    transition: all 0.5s ease;
+}
+#member_box #form_box input, select{
+    text-indent: 1em;
+}

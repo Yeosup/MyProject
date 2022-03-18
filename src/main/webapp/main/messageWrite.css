@@ -1,0 +1,792 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gothic A1', sans-serif;
+}
+body, html{
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+}
+#container{
+	height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #fff;
+    padding: 6px 14px;
+    border-right: 1px solid rgb(233, 233, 233);
+}
+.sidebar .log_content .logo{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.sidebar .log_content .logo img{
+    width: 200px;
+    margin-left: 10px;
+}
+.sidebar ul{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.sidebar ul li{
+    position: relative;
+    height: 70px;
+    width: 200px;
+    /* margin: 0 5px; */
+    list-style: none;
+    /* line-height: 50px; */
+    /* background-color: rgb(66, 63, 63); */
+}
+.sidebar ul li a{
+    color: #2B3340;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+    /* background-color: #fff; */
+}
+.sidebar ul li a:hover{
+    color: #FF9A76;
+    background: rgb(233, 233, 233);
+}
+.sidebar ul li i{
+    /* height: 50px; */
+    font-size: 30px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.sidebar .links_name{
+    position: relative;
+    width: 150px;
+    left: 30px;
+    /* background-color: rgb(231, 125, 125); */
+    /* pointer-events: none; */
+    /* transition: all 0.5s ease; */
+}
+.sidebar .profile_content{
+    position: absolute;
+    color: #2B3340;
+    bottom: 0;
+    left: 0;
+    /* background-color: #FF9A76; */
+    width: 100%;
+    height: 27%;
+}
+.sidebar .profile_content .profile{
+    position: relative;
+    /* padding: 10px 6px; */
+    left: 5%;
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    /* background-color: #FF9A76; */
+    box-shadow: 0 0 10px #d8d8d8;
+}
+.profile_content .profile .profile_details{
+    display: flex;
+    align-items: center;
+    /* pointer-events: none; */
+    white-space: nowrap;
+}
+.profile .profile_details .profile_info{
+    width: 65px;
+    height: 43px;
+    margin-top: 5%;
+    margin-left: 10%;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: #e4e4e4;
+    border: none;    
+}
+.profile .profile_details .profile_info img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.profile .profile_details .user_info{
+    margin-left: 15px;
+    width: 100%;
+    /* background-color: #1d1b31; */
+}
+.profile .profile_details .name{
+    position: relative;
+    top: 15px;
+    font-size: 17px;
+    font-weight: 600;
+    /* background-color: #aaa6db; */
+}
+.profile .profile_details .log{
+    position: relative;
+    top: 48px;
+    left: -45px;
+    font-size: 13px;
+    /* font-weight: 500; */
+    /* background-color: #aaa6db; */
+}
+.profile .profile_details .log a{
+    text-decoration: none;
+    color: #FF9A76;
+}
+.profile .profile_details .bxs-circle{
+    float: right;
+    margin-right: 10%;
+    font-size: 12px;
+    color: rgb(4, 197, 133); 
+}
+.profile #log_out{
+    position: relative;
+    top: 30%;
+    left: 78%;
+    font-size: 30px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    color: #2B3340;
+}
+.profile #log_out:hover{
+    color: #FF9A76;
+    transition: all 0.5s ease;
+}
+/* 센터 메뉴 */
+.home_content{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    height: 100%;
+    width: 755px;
+    /* border-right: 1px solid rgb(233, 233, 233); */
+    left: 22%;
+    /* background-color: #FF9A76; */
+}
+.home_content .profile_box{
+    width: 99%;
+    height: 40%;
+    /* background-color: #FF9A76; */
+}
+.home_content .profile_box .profile_img{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    top: 93%;
+    margin-left: 2%;
+    border-radius: 75px;
+    background-color: #e4e4e4;
+    overflow: hidden;
+}
+.home_content .profile_box .profile_img #myImg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* background-color: #FF9A76; */
+    cursor: pointer;
+    transition: 0.3s;
+}
+.home_content .profile_box .profile_img #myImg:hover{
+    opacity: 0.7;
+}
+/* 프로필 상단 뒤로가기 */
+.profile_box #back{
+    position: relative;
+    margin-top: 3%;
+    left: 2%;
+    width: 35px;
+    height: 35px;
+    /* background-color: aqua; */
+}
+.profile_box #back .bx-left-arrow-alt{
+    width: 20px;
+    margin: 10% auto;
+    margin-left: 15%;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff
+}
+.profile_box #back .bx-left-arrow-alt:hover{
+    color: #FF9A76;
+    transition: all 0.5s ease;
+}
+/* 프로필 상단 아이디 */
+.profile_box .welcomeMsg{
+    position: relative;
+    left: 8%;
+    top: -11%;
+    color: #fff
+}
+.home_content .profileEdit{
+	position: relative;
+	top: -55%;
+	left: 5%;	
+	/* background-color: black; */
+}
+.home_content .profileEdit textarea{
+	font-size: 21px;
+	text-indent: 1em;
+	border: none;
+    resize: none;
+    border-radius: 15px;
+}
+.home_content .profileEdit textarea:focus{
+	outline: none;
+}
+/* 메세지 박스 */
+.home_content .profileEdit .messageBox{
+	position: relative;
+	top: 0;
+}
+/* 메세지 보내기 버튼 */
+.home_content .profileEdit #profileEditBtn{
+    position: relative;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    background-color: #fcac8f;
+    margin-top: 20%;
+    left: 65%;
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(224, 224, 224);
+    z-index: 3;
+}
+.home_content .profileEdit #profileEditBtn:hover{
+    background-color: #FF9A76;
+    transition: all 0.5s ease;
+}
+/* 프로필 배경 박스 */
+.profile_box .backgroundImg{
+    position: absolute;
+    width: 95%;
+    height: 60%;
+    top: 0%;
+    background-color: #F5D1B8;
+    z-index: -999;
+}
+/* 프로필 배경 아래 박스 */
+.profile_box .backgroundImgUnder{
+    position: absolute;
+    width: 95%;
+    height: 50%;
+    top: 80%;
+    overflow: auto;
+    /* border: 1px solid #F7F7F7; */
+    /* background-color: #f3f3f3; */
+}
+.profile_box .backgroundImgUnder::-webkit-scrollbar{
+	display: none;
+}
+.profile_box .backgroundImgUnder table{
+    border-collapse: collapse;
+    border-spacing: 0 20px;
+ }
+.profile_box .backgroundImgUnder table tr{
+	border-bottom: 1px solid rgb(233, 233, 233);
+}
+.profile_box .backgroundImgUnder table tr:hover{
+	transition: 0.3s;
+	background-color: #F7F7F7;
+}
+.profile_box .backgroundImgUnder table tr td{
+    padding: 20px;
+}
+.profile_box .backgroundImgUnder table tr td .friendImg{
+    position: relative;
+    width: 55px;
+    height: 55px;
+    /* top: -20px; */
+    /* margin-left: 4%; */
+    border-radius: 75px;
+    background-color: #e4e4e4;
+    overflow: hidden;
+}
+.profile_box .backgroundImgUnder table tr td .friendImg #myImg{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* background-color: #FF9A76; */
+    cursor: pointer;
+    transition: 0.3s;
+}
+.profile_box .backgroundImgUnder .writerInfo{
+	display: flex;
+ 	justify-content: space-between;
+	font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    width: 580px;
+    height: 25px;
+    line-height: 25px;
+    /* background-color: #FF9A76; */
+}
+.profile_box .backgroundImgUnder .writerInfo a{
+	color: #2B3340;
+    text-decoration: none;
+    transition: 0.3s;
+    width: 100px;
+}
+.profile_box .backgroundImgUnder .writerInfo a:hover{
+	text-decoration: underline;	
+}
+.profile_box .backgroundImgUnder .writerPromise{
+	font-family: 'Gothic A1', sans-serif;
+    font-size: 12px;
+    width: 400px;
+    height: 35px;
+    color: #828282;
+    /* line-height: 25px; */
+    /* background-color: #FF9A76; */
+}
+.profile_box .backgroundImgUnder .writeTime{
+	font-family: 'Gothic A1', sans-serif;
+    font-size: 12px;
+    width: 150px;
+    height: 35px;
+    color: #828282;
+    /* background-color: #FF9A76; */
+}
+.profile_box .backgroundImgUnder .bx-plus{
+	position: absolute;
+	left: 670px;
+	color: #828282;
+	font-size: 20px;
+	cursor: pointer; /* 글 수정 삭제 버튼 추가해야함 */
+}
+.profile_box .backgroundImgUnder .contents{
+	font-family: 'Gothic A1', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    width: 500px;
+    height: 35px;
+    line-height: 35px;
+    padding: 5px;
+    /* background-color: #FF9A76; */
+}
+/* 모달 */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 4; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #2B3340; /* Fallback color */
+    background-color: rgba(43,51,64,0.7); /* Black w/ opacity */
+ }
+  
+  /* Modal Content (image) */
+ .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+ }
+  
+  /* Caption of Modal Image */
+ #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #2B3340;
+    padding: 10px 0;
+    height: 150px;
+ }
+  
+  /* Add Animation */
+ .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    cursor: pointer;
+ }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+ }
+/*  우측 라인 */
+ .rightSide{
+ 	position: fixed;
+ 	top: 0;
+ 	right: 28%;
+ 	height: 100%;
+ 	border-right: 1px solid rgb(233, 233, 233);
+ }
+/*  우측 메뉴 */
+ #container .rightMenu{
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ right: 2%;
+ width: 25%;
+ height: 150%;
+ /* background-color: #bbb; */
+ }
+/*  검색 상자 */
+ .rightMenu .searchBox .searchContents{
+ 	position: relative;
+ 	left: 20px;
+ 	text-indent: 3em;
+ 	font-family: 'Gothic A1', sans-serif;
+    font-size: 17px;
+    font-weight: 500;	
+ 	width: 350px;
+ 	height: 45px;
+ 	border: 1px solid #f6f6f6;
+ 	border-radius: 25px;
+ 	background-color: #f3f3f3;
+ }
+  .rightMenu .searchBox  .box-radio-input{
+  	position: relative;
+  	left: 20%;
+  	margin: 10px;
+  }
+ .rightMenu .searchBox  .box-radio-input input[type="radio"]{
+	display:none;
+}
+
+ .rightMenu .searchBox .box-radio-input input[type="radio"] + span{
+	display:inline-block;
+	background:none;
+	/* border:1px solid #dfdfdf;  */
+	width: 55px;
+	height:30px;
+	text-align:center;
+	line-height:33px;
+	font-size: 11px;
+	cursor:pointer;
+}
+
+ .rightMenu .searchBox .box-radio-input input[type="radio"]:checked + span{
+	/* border:1px solid #679B9B; */
+	background:#679B9B;
+	color:#fff;
+}
+ .rightMenu .searchBox .searchContents::placeholder{
+ 	color: #bbb;
+ }
+ .rightMenu .searchBox .searchContents:focus{
+ 	background-color: #fff;
+ }
+ .rightMenu .searchBox .bx-search{
+ 	position: relative;
+ 	vertical-align: middle;
+ 	top: 37px;
+ 	left: 40px;
+ 	font-size: 19px;
+ 	color: #bbb;
+ 	z-index: 4;
+ }
+  .rightMenu .searchBox button{
+  	position: relative;
+  	top: 38px;
+  	border: none;
+  	background: none;
+  	position: relative;
+ 	vertical-align: middle;
+ 	left: 310px;
+ 	font-size: 19px;
+ 	color: #bbb;
+ 	z-index: 4;
+ 	cursor: pointer;
+  }
+ input:focus {
+ 	text-indent: 3em;
+	outline:1px solid #FF9A76;
+}
+ input::placeholder { text-indent: 3em; }
+ 
+/* 친구 박스 */
+.rightMenu .friendBox{
+	position: relative;
+	top: 30px;
+	left: 23px;
+	width: 350px;
+ 	height: 400px;
+ 	border-radius: 25px;
+ 	background-color: #f3f3f3;
+ 	overflow: auto;
+ 	vertical-align: middle;
+}
+.rightMenu .friendBox p{
+	position: relative;
+	top: 5px;
+	left: 10px;
+	padding: 20px;
+	font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+}
+.rightMenu .friendBox::-webkit-scrollbar{
+	display: none;
+}
+.rightMenu .friendBox table tr{
+	border-bottom: 1px solid rgb(233, 233, 233);
+}
+.rightMenu .friendBox table tr:hover{
+	transition: 0.3s;
+	background-color: #F7F7F7;
+}
+.rightMenu .friendBox table tr td{
+	 padding: 10px;
+}
+.rightMenu .friendBox table tr td .writerImg{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    /* top: -20px; */
+    /* margin-left: 4%; */
+    border-radius: 75px;
+    background-color: #e4e4e4;
+    overflow: hidden;
+}
+.rightMenu .friendBox table tr td .writerImg #myImg{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* background-color: #FF9A76; */
+    cursor: pointer;
+    transition: 0.3s;
+}
+.rightMenu .friendBox .writerInfo{
+	display: flex;
+ 	justify-content: space-between;
+	font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    width: 270px;
+    height: 20px;
+    line-height: 20px;
+    /* background-color: #FF9A76; */
+}
+.rightMenu .friendBox .writerInfo a{
+	color: #2B3340;
+    text-decoration: none;
+    transition: 0.3s;
+    width: 100px;
+}
+.rightMenu .friendBox .writerInfo a:hover{
+	text-decoration: underline;	
+}
+.rightMenu .friendBox .writerPromise{
+	font-family: 'Gothic A1', sans-serif;
+    font-size: 12px;
+    width: 190px;
+    height: 35px;
+    color: #828282;
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+    white-space:nowrap;
+    /* line-height: 25px; */
+    /* background-color: #FF9A76; */
+}
+.rightMenu .friendBox #makeFriendBTN{
+    position: relative;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    color: #fff;
+    background-color: #fcac8f;
+    top: -7px;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(224, 224, 224);
+    /* z-index: 3; */
+}
+.rightMenu .friendBox #makeFriendBTN{
+    background-color: #FF9A76;
+    transition: all 0.5s ease;
+}
+/* .rightMenu .friendBox .bx-dots-vertical-rounded{
+	color: #828282;
+	font-size: 20px;
+	cursor: pointer; 글 수정 삭제 버튼 추가해야함
+} */
+
+/* 보낸 메일 */
+.rightMenu .miniList{
+	position: relative;
+	top: 60px;
+	left: 23px;
+	width: 350px;
+ 	height: 400px;
+ 	border-radius: 25px;
+ 	background-color: #f3f3f3;
+ 	overflow: auto;
+ 	vertical-align: middle;
+}
+.rightMenu .miniList p{
+	position: relative;
+	top: 5px;
+	left: 10px;
+	padding: 20px;
+	font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+}
+.rightMenu .miniList::-webkit-scrollbar{
+	display: none;
+}
+.rightMenu .miniList table tr{
+	border-bottom: 1px solid rgb(233, 233, 233);
+}
+.rightMenu .miniList table tr:hover{
+	transition: 0.3s;
+	background-color: #F7F7F7;
+}
+.rightMenu .miniList table tr td{
+	 padding: 10px;
+}
+.rightMenu .miniList table tr td .writerImg{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    /* top: -20px; */
+    /* margin-left: 4%; */
+    border-radius: 75px;
+    background-color: #e4e4e4;
+    overflow: hidden;
+}
+.rightMenu .miniList table tr td .writerImg #myImg{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* background-color: #FF9A76; */
+    cursor: pointer;
+    transition: 0.3s;
+}
+.rightMenu .miniList .writerInfo{
+	display: flex;
+ 	justify-content: space-between;
+	font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    width: 270px;
+    height: 20px;
+    line-height: 20px;
+    /* background-color: #FF9A76; */
+}
+.rightMenu .miniList .writerInfo a{
+	color: #2B3340;
+    text-decoration: none;
+    transition: 0.3s;
+    width: 100px;
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+    white-space:nowrap;
+}
+.rightMenu .miniList .writerInfo a:hover{
+	text-decoration: underline;	
+}
+.rightMenu .miniList .miniContents{
+	position: absolute;
+	font-family: 'Gothic A1', sans-serif;
+    font-size: 12px;
+    width: 150px;
+    left: 140px;
+    height: 35px;
+    color: #828282;
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+    white-space:nowrap;
+    /* line-height: 25px; */
+    /* background-color: #FF9A76; */
+}
+/* 글 삭제 버튼*/
+.rightMenu .miniList #settingContents{
+	width: 30px;
+	/* background-color: #828282; */
+}
+.rightMenu .miniList #settingContents .bx-dots-vertical-rounded{
+	color: #828282;
+	font-size: 20px;
+	cursor: pointer; 
+}
+.rightMenu .miniList #settingContents .settingContents{
+	position: relative;
+	left: -10px;
+    font-size: 11px;
+    text-align: center;
+	display: none;
+	width: 50px;
+	height: 25px;
+	background-color: #679B9B;
+	border-radius: 5px;
+}
+.rightMenu .miniList #settingContents .settingContents p a{
+	position: relative;
+	top: -25px;
+	left: -17px;
+	font-size: 11px;
+}
+.rightMenu .miniList #settingContents .settingContents:hover{
+	border-radius: 5px;
+	background-color: #87C9C7;
+}
+.rightMenu .miniList #settingContents .settingContents a{
+	text-decoration: none;
+	color: white;
+}

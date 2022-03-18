@@ -1,0 +1,163 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap');
+html, body{height: 100%;}
+body{background-color: rgb(185, 184, 184);}
+#login_box{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 2% auto;
+    width: 50%;
+    height: 90vh;
+    background-color: #fff;
+    border-radius: 20px;
+}
+#login_box #inner_box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: aquamarine; */
+}
+#login_box #inner_box #close{
+    margin-left: 1%;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    margin-top: 1%;
+    /* background-color: aqua; */
+}
+#login_box #close .bx-x{
+    margin: 10% auto;
+    margin-left: 15%;
+    font-size: 25px;
+    cursor: pointer;
+}
+#login_box #close .bx-x:hover{
+    transition: all 0.5s ease;
+    color: #F5D1B8;
+}
+#login_box #inner_box .logo_box a{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    /* background-color: #fcac8f; */
+    align-items: center;
+    text-decoration: none;
+}
+#login_box #inner_box .logo_box a img{
+    margin-left: 30%;
+}
+#login_box #inner_box .logo_box a span{
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #2B3340;
+}
+#login_box #inner_box #login{
+    margin: 0 auto;
+    width: 100%;
+    height: 40%;
+    margin-top: 6%;
+    text-align: center;
+    /* background-color: aquamarine; */
+}
+#login_box #inner_box #login #id{
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 15px;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(224, 224, 224);
+}
+#login_box #inner_box #login #pw{
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 15px;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(224, 224, 224);
+}
+input:focus {
+	outline:2px solid #FF9A76;
+}
+#login_box #inner_box #login #login_btn{
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    background-color: #fcac8f;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(224, 224, 224);
+}
+#login_box #inner_box #login #login_btn:hover {
+    background-color: #FF9A76;
+    transition: all 0.5s ease;
+}
+#login_box #inner_box #login .stay_Login{
+    position: relative;
+    top: 5px;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #868686; 
+}
+#login_box #inner_box #login #stay_Login{
+    position: relative;
+    top: 4px;
+    width: 17px;
+    height: 17px;
+    margin-left: -20%;
+    vertical-align: middle;
+}
+#login_box #inner_box #login .find{
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    top: 40px;
+    text-decoration: none;
+    color: #a7a7a7;
+}
+#login_box #inner_box #login img{
+    position: relative;
+    top: 80px;
+}
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    outline: none !important;
+    border: 1px solid #eeeeee;
+    border-radius: 2px;
+    background: #fbfbfb;
+}
+input[type="checkbox"]::before {
+    content: "\2713";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: scale(0) translate(-50%, -50%);
+    line-height: 1;
+}
+input[type="checkbox"]:hover {
+    border-color: rgba(170, 170, 170, 0.5);
+}
+input[type="checkbox"]:checked {
+    background-color: #ff8955;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+input[type="checkbox"]:checked::before {
+    border-radius: 2px;
+    transform: scale(1) translate(-50%, -50%)
+}
+#login_box #inner_box #login #id, #pw{
+	text-indent: 1em;
+}

@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap');
+*{margin: 0; padding: 0; box-sizing: border-box;}
+html, body{height: 100%;}
+#container{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px auto;
+    position: relative;
+    width: 95%;
+    height: 760px;
+    /* background-color: #FF9A76; */
+}
+header{
+    width: 100%;
+    height: 50px;
+    /* background-color: antiquewhite; */
+}
+aside{
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 760px;
+    z-index: 2;
+    /* background-color: #F1DE77; */
+}
+aside img{
+    width: 90%;
+}
+article{
+    position: relative;
+    width: 50%;
+    height: 760px;
+    /* background-color: beige; */
+}
+article .article_box{
+    margin-left: -30%;
+    background-color: #FF9A76;
+    opacity: 0.1;
+    width: 130%;
+    height: 760px;
+    z-index: 1;
+}
+section{
+    margin-left: -50%;
+    width: 50%;
+    height: 760px;
+    /* background-color: #679B9B; */
+}
+section .main_text{
+    width: 70%;
+    height: 20%;
+    /* background-color: #679B9B; */
+    margin-top: 25%;
+}
+section .main_text h1{
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 68px;
+    color: #2B3340;
+}
+section .main_text h3{
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 25px;
+    color: #2B3340;
+}
+section .main_text #login #login_btn{
+    position: relative;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    background-color: #fcac8f;
+    margin-top: 10%;
+    margin-left: 20%;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(224, 224, 224);
+    z-index: 3;
+}
+section .main_text #login #login_btn:hover {
+    background-color: #FF9A76;
+    transition: all 0.5s ease;
+}
+section .main_text p{
+    margin-left: 34%;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #2B3340;
+}
+section .main_text span{
+    margin-left: 44%;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 15px;
+    color: #2B3340;
+}
+section .main_text #login #member_btn{
+    position: relative;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    background-color: #7f9e9e;
+    margin-left: 20%;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(224, 224, 224);
+    z-index: 3;
+}
+section .main_text #login #member_btn:hover {
+    background-color: #679B9B;
+    transition: all 0.5s ease;
+}
+footer{
+    clear: both;
+    width: 100%;
+    height: 50px;
+    /* background-color: blue; */
+}
+
+@media (max-width: 1220px){
+    aside{width: 50%;}
+    article{width: 50%; height: 300px;}
+    section{width: 50%;}
+}
+@media (max-width: 768px){
+    aside{width: 100%; height: 300px;}
+    section{width: 100%; height: 300px;}
+}
+@media (max-width: 480){
+    header{height: 50px;}
+    aside{height: 200px;}
+    section{height: 200px;}
+}

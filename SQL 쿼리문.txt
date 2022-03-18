@@ -1,0 +1,60 @@
+BoardDAO
+
+TABLE_NAME_B = "board";
+TABLE_NAME_M = "member";
+
+"SELECT b.*, m.* FROM "+TABLE_NAME_B+ " b, "+TABLE_NAME_M+" m"+" WHERE b.no=? AND m.id=?"
+"SELECT MAX(no) FROM "+TABLE_NAME_B
+"INSERT INTO "+TABLE_NAME_B+"(id, contents, groupNum) VALUES(?, ?, ?)"
+"UPDATE "+TABLE_NAME_B+" SET contents=?, wtime=now() WHERE no=?";
+"UPDATE "+TABLE_NAME_B+" SET stepNum=stepNum+1 WHERE groupNum=? AND stepNum>=?";
+"INSERT INTO "+TABLE_NAME_B+"(id, contents, groupNum, stepNum, indentNum) VALUES(?, ?, ?, ?, ?)";
+"DELETE FROM "+TABLE_NAME_B+" WHERE no=?";
+"SELECT * FROM "+TABLE_NAME_B+" join "+TABLE_NAME_M+" on "+TABLE_NAME_B+".id="+TABLE_NAME_M+".id"+" ORDER BY groupNum DESC, stepNum ASC";
+"SELECT * FROM "+TABLE_NAME_B+" join "+TABLE_NAME_M+" on "+TABLE_NAME_B+".id like concat('%', "+TABLE_NAME_M+".id, '%') where "+TABLE_NAME_M+".id like ? ORDER BY groupNum DESC, stepNum ASC;";
+"SELECT * FROM "+TABLE_NAME_B+" join "+TABLE_NAME_M+" on "+TABLE_NAME_B+".id like concat('%', "+TABLE_NAME_M+".id, '%') where "+TABLE_NAME_M+".nickname like ? ORDER BY groupNum DESC, stepNum ASC;";
+"SELECT * FROM "+TABLE_NAME_B+" join "+TABLE_NAME_M+" on "+TABLE_NAME_B+".id like concat('%', "+TABLE_NAME_M+".id, '%') where "+TABLE_NAME_B+".contents like ? ORDER BY groupNum DESC, stepNum ASC;";
+"SELECT COUNT(*) FROM "+TABLE_NAME_B+" WHERE id=?"
+"UPDATE "+TABLE_NAME_B+" SET replyCnt = replyCnt + 1 WHERE no=?"
+"UPDATE "+TABLE_NAME_B+" SET good = good + 1 WHERE no=?"
+"UPDATE "+TABLE_NAME_B+" SET bad = bad + 1 WHERE no=?"
+"SELECT * FROM "+TABLE_NAME_B+" join "+TABLE_NAME_M+" on "+TABLE_NAME_B+".id="+TABLE_NAME_M+".id"+" WHERE stepNum=0 ORDER BY groupNum DESC";
+"SELECT * FROM "+TABLE_NAME_B+" join "+TABLE_NAME_M+" on "+TABLE_NAME_B+".id="+TABLE_NAME_M+".id"+" WHERE "+TABLE_NAME_M+".id=? ORDER BY groupNum DESC, stepNum ASC";
+
+
+MemberDAO
+
+TABLE_NAME = "member";
+TABLE_NAME_B = "board";
+
+"INSERT INTO "+TABLE_NAME+"(id, pw, name, birthYear, birthMonth, birthDate, gender, email, mobile, profile, nickname, promise) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+"UPDATE "+TABLE_NAME+" SET name=?, birthYear=?, birthMonth=?, birthDate=?, gender=?, email=?, mobile=?, profile=? WHERE id=?";
+"SELECT * FROM "+TABLE_NAME+" WHERE id=? AND pw=?"
+"SELECT * FROM "+TABLE_NAME+" WHERE id=?"
+"UPDATE "+TABLE_NAME+" SET profile=?, nickname=?, promise=? WHERE id=?"
+"SELECT profile, nickname, id FROM "+TABLE_NAME+" WHERE id=?"
+"SELECT * FROM "+TABLE_NAME
+"UPDATE "+TABLE_NAME+" SET friendId=? WHERE id=?"
+"SELECT * FROM "+TABLE_NAME+" WHERE id=?"
+
+
+FriendDAO
+
+TABLE_NAME_F = "friend";
+TABLE_NAME_B = "board";
+TABLE_NAME_M = "member";
+
+"INSERT INTO "+TABLE_NAME_F+"(id, friendId, profile, nickname, promise) SELECT ?, ?, ?, ?, ? FROM DUAL WHERE NOT EXISTS (SELECT * FROM friend WHERE id=? and friendId=?)"
+"SELECT * FROM "+TABLE_NAME_F+" WHERE id=?"
+"SELECT COUNT(*) FROM "+TABLE_NAME_F+" WHERE id=?"
+"delete from "+TABLE_NAME_F+" where id=? and friendId=?"
+
+
+DirectMessageDAO
+
+TABLE_MANE_D = "directMessage";
+TABLE_NAME_M = "member";
+
+"SELECT * FROM "+TABLE_MANE_D+" JOIN "+TABLE_NAME_M+" on "+TABLE_MANE_D+".id="+TABLE_NAME_M+".id"+" WHERE "+TABLE_MANE_D+".id=?"
+"SELECT * FROM "+TABLE_MANE_D+" JOIN "+TABLE_NAME_M+" on "+TABLE_MANE_D+".id="+TABLE_NAME_M+".id"+" WHERE "+TABLE_MANE_D+".friendId=?"
+"INSERT INTO "+TABLE_MANE_D+" VALUES(null, ?, ?, ?, now(), ?, ?)"
