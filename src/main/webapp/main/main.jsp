@@ -135,7 +135,7 @@
                     <div class="writeMain">
 	                    <form id="writeForm" action="writeOK.do" method="post" onsubmit="return formSubmit()">
 	                    	<div id="text_cnt">0 / 30</div>
-	                    	<input type="text" name="contents" id="writeOK" maxlength="30" placeholder="오늘의 한 줄 고민을 남겨보세요">
+	                    	<input type="text" name="contents" id="writeOK" maxlength="30" placeholder="오늘의 한 줄을 남겨보세요">
 	                    	<input type="submit" value="작성" id="writeMain">
 	                    </form>
                     </div>
