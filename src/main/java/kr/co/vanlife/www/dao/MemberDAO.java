@@ -26,7 +26,7 @@ public class MemberDAO {
 	private MemberDAO() {
 		try {
 			Context cont = new InitialContext();
-			ds = (DataSource) cont.lookup("java:comp/env/jdbc/testdb");
+			ds = (DataSource) cont.lookup("java:comp/env/jdbc/LMK");
 		}catch(NamingException e) {
 			e.printStackTrace();
 		}
