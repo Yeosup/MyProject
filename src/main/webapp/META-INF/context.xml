@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource 
+		name="jdbc/LMK"
+		auth="Container"
+		driverClassName="com.mysql.cj.jdbc.Driver"
+		url="jdbc:mysql://lmk.cgmsbegzbtcd.ap-northeast-2.rds.amazonaws.com:3306/LMK?serverTimezone=UTC"
+		username="LMK_DBA"
+		password="fpsalsh1012^^"
+		type="javax.sql.DataSource"
+			/>
+</Context>
