@@ -29,6 +29,7 @@ public class ProfileUploadCommand implements Command {
 		MultipartRequest multi = null;
 		int fileMaxSize = 10 * 1024 * 1024;
 		String savePath = request.getSession().getServletContext().getRealPath("/upload");
+		System.out.print(savePath);
 		String file = "";
 		String oriFile = "";
 		try {
