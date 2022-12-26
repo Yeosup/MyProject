@@ -28,7 +28,8 @@ public class ProfileUploadCommand implements Command {
 		FriendDTO dtoM = new FriendDTO();
 		MultipartRequest multi = null;
 		int fileMaxSize = 10 * 1024 * 1024;
-		String savePath = request.getSession().getServletContext().getRealPath("/upload");
+//		String savePath = request.getSession().getServletContext().getRealPath("/upload");
+		String savePath = "/home/ubuntu/upload";
 		String file = "";
 		String oriFile = "";
 		try {
