@@ -122,7 +122,8 @@
 	                            	<img id=myImg src="http://localhost:8080/Project/upload/user_icon.png">
 	                            </c:when>
 	                            <c:otherwise>
-	                            	<img id=myImg src="http://localhost:8080/Project/upload/${userInfo.profile }">
+	                            	<!--<img id=myImg src="http://localhost:8080/Project/upload/${userInfo.profile }">-->
+	                            	<img id=myImg src="/home/ubuntu/upload/${userInfo.profile }">
 	                            </c:otherwise>
                             </c:choose>
                         </a>
