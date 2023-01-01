@@ -74,10 +74,10 @@
                             <div class="profile_info">
                             <c:choose>
 	                            <c:when test="${userInfo.profile eq null }">
-	                            	<img src="http://localhost:8080/Project/upload/user_icon.png">
+	                            	<img src="/Project/upload/user_icon.png">
 	                            </c:when>
 	                            <c:otherwise>
-	                            	<img src="http://localhost:8080/Project/upload/${userInfo.profile }">
+	                            	<img src="/Project/upload/${userInfo.profile }">
 	                            </c:otherwise>
                             </c:choose>
 	                            <!-- <div id="myModal" class="modal">
@@ -119,10 +119,10 @@
                         <a href="main_profile.do?id=${userInfo.id }">
                         	<c:choose>
 	                            <c:when test="${userInfo.profile eq null }">
-	                            	<img id=myImg src="http://localhost:8080/Project/upload/user_icon.png">
+	                            	<img id=myImg src="/Project/upload/user_icon.png">
 	                            </c:when>
 	                            <c:otherwise>
-	                            	<img id=myImg src="http://localhost:8080/Project/upload/${userInfo.profile }">
+	                            	<img id=myImg src="/Project/upload/${userInfo.profile }">
 	                            </c:otherwise>
                             </c:choose>
                         </a>
@@ -148,10 +148,10 @@
 				                    		<a href="main_profile.do?id=${userInfo.id }">
 					                        	<c:choose>
 						                            <c:when test="${dto.profile eq null }">
-						                            	<img id=myImg src="http://localhost:8080/Project/upload/user_icon.png">
+						                            	<img id=myImg src="/Project/upload/user_icon.png">
 						                            </c:when>
 						                            <c:otherwise>
-						                            	<img id=myImg src="http://localhost:8080/Project/upload/${dto.profile }">
+						                            	<img id=myImg src="/Project/upload/${dto.profile }">
 						                            </c:otherwise>
 					                            </c:choose>
 				                        	</a>
@@ -243,10 +243,10 @@
 				                	<a href="main_profile.do?id=${memberList.id }">
 					                	<c:choose>
 						                	<c:when test="${memberList.profile eq null }">
-						                    	<img id=myImg src="http://localhost:8080/Project/upload/user_icon.png">
+						                    	<img id=myImg src="/Project/upload/user_icon.png">
 						                	</c:when>
 						            		<c:otherwise>
-						                    	<img id=myImg src="http://localhost:8080/Project/upload/${memberList.profile }">
+						                    	<img id=myImg src="/Project/upload/${memberList.profile }">
 						                	</c:otherwise>
 					                	</c:choose>
 				                	</a>
