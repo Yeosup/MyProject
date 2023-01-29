@@ -587,13 +587,13 @@ input:focus{
  }
 /*  우측 메뉴 */
  #container .rightMenu{
- position: absolute;
- display: flex;
- flex-direction: column;
- right: 2%;
- width: 25%;
- height: 150%;
- /* background-color: #bbb; */
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	right: 2%;
+	width: 25%;
+	height: 150%;
+	/* background-color: #bbb; */
  }
 /*  검색 상자 */
 .rightMenu .searchBox .searchContents{
